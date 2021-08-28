@@ -1,22 +1,27 @@
-<h2>Alta Cliente</h2>
-<p>
-    <span>Nombre: </span>
-    <input type="text" [(ngModel)]="cliente.nombre">
-</p>
-<p>
-    <span>Curp: </span>
-    <input type="text" [(ngModel)]="cliente.curp">
-</p>
-<p>
-    <span>Dirección: </span>
-    <input type="text" [(ngModel)]="cliente.direccion">
-</p>
-<p>
-    <span>Grupo: </span>
-    <select [(ngModel)]="cliente.sexo">
-        <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.sexo}}</option>
-    </select>
-</p>
-<p>
-    <button (click)="this.nuevoCliente()">Guardar</button>
-</p>
+<section>
+    <h2>Alta Cliente</h2>
+    <p>
+        <span>Nombre: </span>
+        <input type="text" [(ngModel)]="cliente.nombre">
+    </p>
+    <p>
+        <span>Curp: </span>
+        <input type="text" [(ngModel)]="cliente.curp">
+    </p>
+    <p>
+        <span>Dirección: </span>
+        <input type="text" [(ngModel)]="cliente.direccion">
+    </p>
+    <p>
+        <span>Grupo: </span>
+        <select [(ngModel)]="cliente.sexo">
+            <option *ngFor="let grupo of grupos" value="{{grupo.id}}">{{grupo.sexo}}</option>
+        </select>
+    </p>
+    <p>
+        <button (click)="this.nuevoCliente()">Guardar</button>
+    </p>
+    <app-listado-clientes>
+    </app-listado-clientes>
+</section>
+
